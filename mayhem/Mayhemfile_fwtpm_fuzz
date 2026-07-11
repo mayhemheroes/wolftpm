@@ -1,0 +1,9 @@
+project: wolftpm
+target: fwtpm_fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fwtpm_fuzz/testsuite
+cmds:
+  - cmd: /mayhem/fwtpm_fuzz
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fwtpm_fuzz.dict

@@ -1,0 +1,8 @@
+project: wolftpm
+target: fuzz_asn_cert
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_asn_cert/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_asn_cert
+    libfuzzer: true
